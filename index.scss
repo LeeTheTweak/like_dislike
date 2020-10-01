@@ -1,0 +1,46 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-content-section {
+    width: 50%;
+    margin: auto;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding: 40px;
+    section {
+        border-radius: 100%;
+        padding: 40px;
+        transition: .2s ease-in-out;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            border-radius: 100%;
+            background: #80a6ec;
+            &:nth-child(2) {
+                background: #f38a8a;
+            }
+        }
+    }
+    i {
+        font-size: 10rem;
+    }
+    .fa-thumbs-down {
+        transform: scale(-1,1);
+    }
+    
+    span {
+        font-size: 8rem;
+    }
+}
+
+.main-content-wrapper {
+    color: grey;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
