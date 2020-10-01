@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+import Like from './components/Like';
+import Dislike from './components/Dislike';
+
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+
+        }
+    }
+    render() {
+        return(
+            <section className="main-content-section">
+                <div className="main-content-wrapper">
+                    <Like />
+                    <Dislike />
+                </div>
+            </section>
+        );
+    }
+}
+
+const app = document.getElementById("app");
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />,
+    app 
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
